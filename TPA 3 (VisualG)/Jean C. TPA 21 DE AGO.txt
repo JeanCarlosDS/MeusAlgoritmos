@@ -1,0 +1,329 @@
+Jean C.
+1° DS
+
+1- Algoritmo "Fatorial"
+Var
+   x,i: inteiro
+   fat: real
+Inicio
+mudacor ("VERDE","FRENTE")
+escreval ("Digite o número: ")
+leia (x)
+i <- 1
+fat <- x
+enquanto (i<x) faca
+   fat <- fat * i
+   i <- i + 1
+fimenquanto
+escreval ("O fatorial de",x," é",fat)
+fimalgoritmo
+
+2- Algoritmo "Questao 2"
+Var
+   num1, num2: inteiro
+   rep: caracter
+Inicio
+MUDACOR("VERDE","FRENTE")
+repita
+   escreva ("Digite um número inteiro: ")
+   leia (num1)
+   num2 <- 2
+   se (num1) MOD (num2) = 0 então
+      escreval ("Estes número é par")
+   senao
+      escreval ("Este número é ímpar")
+   fimse
+   se (num1) MOD (num2) = -1  então
+      escreval ("Este número é negativo")
+   senao
+      escreval ("Este número é positivo")
+   fimse
+   escreva ("Deseja repetir? (s/n): ")
+   leia (rep)
+   limpatela
+ate (rep = "n")
+fimalgoritmo
+
+3- Algoritmo "Nota dos alunos"
+Var
+   media_turma, soma, nota: real
+   alunos: inteiro
+Inicio
+mudacor ("VERDE","FRENTE")
+alunos <- 0
+media_turma <- 0
+enquanto (alunos < 10)faca
+   escreva ("Nota do aluno:")
+   leia (nota)
+   soma <- soma + nota
+   alunos <- alunos + 1
+fimenquanto
+media_turma <-  soma/5
+escreva ("A média da turma é: ",media_turma)
+Fimalgoritmo
+
+4- algoritmo "Menor e maior número"
+var
+   valores: vetor [1..5] de inteiro
+   Maior, menor, contador: inteiro
+   x: real
+inicio
+mudacor ("VERDE","FRENTE")
+repita
+   escreva("Digite o 1 valor: ")
+   leia(valores[1])
+   menor <- valores[1]
+   para contador de 2 ate 5 faca
+      escreva("Digite o",contador," valor: ")
+      leia(valores[contador])
+      se (valores[contador]>maior) ENTÃO
+         maior<-valores[contador]
+      fimse
+      se (valores[contador]<menor) ENTÃO
+         menor<-valores[contador]
+      fimse
+   fimpara
+   escreval("Maior valor: ",maior)
+   escreval("Menor valor: ",menor)
+   escreval("")
+ate (menor <= -1)
+fimalgoritmo
+
+5- algoritmo "Maior valor"
+var
+   valores: vetor [1..10] de inteiro
+   Maior, menor, contador: inteiro
+   media: real
+inicio
+mudacor ("VERDE","FRENTE")
+escreva("Digite o 1 valor: ")
+leia(valores[1])
+menor <- valores[1]
+para contador de 2 ate 10 faca
+   escreva("Digite o",contador," valor: ")
+   leia(valores[contador])
+   se (valores[contador]>maior) ENTÃO
+      maior<-valores[contador]
+   fimse
+   se (valores[contador]<menor) ENTÃO
+      menor<-valores[contador]
+   fimse
+fimpara
+escreval("Maior valor: ",maior)
+escreval("Menor valor: ",menor)
+media <- valores[1] + valores[contador]/10
+escreval ("Media dos valores:", media)
+fimalgoritmo
+
+6- Algoritmo "Calculadora com repetição"
+Var
+   n1, n2: real
+   operacao, rep: caracter
+Inicio
+mudacor ("VERDE", "FRENTE")
+escreval ("-=-=-=-=-=-=-=-=-=-=-=-=-=-")
+escreval ("Calculadora mt top")
+escreval ("-=-=-=-=-=-=-=-=-=-=-=-=-=-")
+repita
+   escreva ("Primeiro valor:")
+   leia (n1)
+   escreva ("Segundo valor:")
+   leia (n2)
+   escreval ("============================")
+   escreval ("QUAL OPERAÇÃO?")
+   escreval ("Soma --> +")
+   escreval ("Subtração --> -")
+   escreval ("Multiplicação --> *")
+   escreval ("Divisão --> /")
+   escreval ("============================")
+   leia (operacao)
+   limpatela
+   escolha (operacao)
+   caso "+"
+      escreval ("============================")
+      escreval ("Resultado:", n1+n2)
+      escreval ("============================")
+   caso "-"
+      escreval ("============================")
+      escreval ("Resultado:", n1-n2)
+      escreval ("============================")
+   caso "*"
+      escreval ("============================")
+      escreval ("Resultado:", n1*n2)
+      escreval ("============================")
+   caso "/"
+      escreval ("============================")
+      escreval ("Resultado:", n1/n2)
+      escreval ("============================")
+   outrocaso
+      escreval ("============================")
+      escreval ("Tipo de operação invalida.")
+      escreval ("============================")
+   fimescolha
+   escreva ("Deseja repetir? (s/n): ")
+   leia (rep)
+   limpatela
+ate (rep = "n")
+Fimalgoritmo
+
+7- Algoritmo "Nadador"
+Var
+   idade: inteiro
+   rep: caracter
+Inicio
+mudacor ("VERDE","FRENTE")
+repita
+   escreva ("Digite a idade do nadador: ")
+   leia (idade)
+   escolha (idade)
+   caso 5 ate 7
+      escreval ("================")
+      escreval ("O nadador faz parte da categoria Infatil A")
+      escreval ("================")
+   caso 8 ate 11
+      escreval ("================")
+      escreval ("O nadador faz parte da categoria Infatil B")
+      escreval ("================")
+   caso 12 ate 13
+      escreval ("================")
+      escreval ("O nadador faz parte da categoria Juvenil A")
+      escreval ("================")
+   caso 14 ate 17
+      escreval ("================")
+      escreval ("O nadador faz parte da categoria Juvenil B")
+      escreval ("================")
+   caso 18 ate 50
+      escreval ("================")
+      escreval ("O nadador faz parte da categoria Adulto")
+      escreval ("================")
+   outrocaso
+      escreval ("================")
+      escreval ("O nadador não faz parte de nenhuma categoria")
+      escreval ("================")
+   fimescolha
+   escreva ("Deseja repetir? (s/n): ")
+   leia (rep)
+   limpatela
+ate (rep = "n")
+Fimalgoritmo
+
+8- algoritmo "Salario"
+var
+   N : inteiro
+   hora, salario, excedente, ganho_extra : real
+   rep: caracter
+inicio
+   repita
+   mudacor("VERDE","FRENTE")
+      hora <- 10
+      escreva("Quantas horas foram trabalhadas? ")
+      leia(N)
+      se (N >= 50) entao
+         excedente <- N - 50
+         ganho_extra <- excedente * 20
+         salario <- n*hora + ganho_extra
+      senao
+         salario <- n*hora
+      fimse
+      limpatela
+      mudacor("AMARELO","FRENTE")
+      escreval ("Salario total: ", salario)
+      escreval ("Salario extra: ", ganho_extra)
+      escreva ("Deseja repetir? (s/n): ")
+      leia (rep)
+      limpatela
+   ate (rep = "n")
+fimalgoritmo
+
+9- Algoritmo "Indice de poluição"
+var
+   industria: real
+inicio
+mudacor ("VERDE","FRENTE")
+escreva("Digite o indice de poluição: ")
+leia (industria)
+se (industria >= 0.05) e (industria <= 0.25) entao
+   escreval ("A empresa está dentro dos padrões aceitaveis.")
+senao
+   se (industria > 0.25) e (industria < 0.4) entao
+      escreval ("As atividades do 1° grupo devem ser paradas.")
+   senao
+      se (industria >= 0.4) e (industria < 0.5) entao
+         escreval ("As atividades do 2° grupo devem ser paradas.")
+      senao
+         se (industria >= 0.5) entao
+            escreval ("As atividades dos 3 grupos devem ser paradas.")
+         fimse
+      fimse
+   fimse
+fimse
+fimalgoritmo
+
+10- Algoritmo "Conversão"
+Var
+   celsius, fahrenheit : real
+   programa: caracter
+   altura, peso, imc: real
+   rep: caracter
+Inicio
+   repita
+   mudacor("VERDE","FRENTE")
+   escreval ("============================")
+   escreval ("QUAL PROGRAMA DESEJA EXECUTAR?")
+   escreval ("Conversão de Graus Celsius em Fahremheit --> C")
+   escreval ("Conversão de Graus Fahremheit em Celsius --> F")
+   escreval ("Peso ideal do homem --> H")
+   escreval ("Peso ideal da mulher --> M")
+   escreval ("============================")
+   leia (programa)
+   limpatela
+mudacor("AMARELO","FRENTE")
+escolha (programa)
+caso "C"
+   escreval ("============================")
+   escreva ("Digite uma temperatura: ")
+   leia (celsius)
+   fahrenheit <- (9*celsius+160)/5
+   escreval ("A temperatura em graus Fahrenheit é: ", fahrenheit)
+   escreval ("============================")
+caso "F"
+   escreval ("============================")
+   escreva ("Digite uma temperatura: ")
+   leia(fahrenheit)
+   celsius <- 5 * (fahrenheit - 32) / 9
+   escreval ("A temperatura em graus Celsius é: ", celsius)
+   escreval ("============================")
+caso "H"
+   escreval ("============================")
+   escreva ("Qual seu peso? ")
+   leia (peso)
+   escreva("Qual a sua altura? ")
+   leia (altura)
+   imc <- (72.7*altura)-58
+   se peso >= imc entao
+      escreval ("Você está acima do peso!")
+   fimse
+   escreval ("O seu peso ideal baseando-se na sua altura é de",imc," kg")
+   escreval ("============================")
+caso "M"
+   escreval ("============================")
+   escreva ("Qual seu peso? ")
+   leia (peso)
+   escreva("Qual a sua altura? ")
+   leia (altura)
+   imc <- (62.1*altura)-44.7
+   se peso >= imc entao
+      escreval ("Você está acima do peso!")
+   fimse
+   escreval ("O seu peso ideal baseando-se na sua altura é de",imc," kg")
+   escreval ("============================")
+outrocaso
+   escreval ("============================")
+   escreval ("Tipo de programa inválido.")
+   escreval ("============================")
+fimescolha
+escreva ("Deseja repetir? (s/n): ")
+leia (rep)
+limpatela
+ate (rep = "n")
+Fimalgoritmo

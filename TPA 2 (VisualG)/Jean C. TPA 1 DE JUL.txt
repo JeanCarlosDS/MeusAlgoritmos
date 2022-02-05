@@ -1,0 +1,136 @@
+Jean C.
+1° DS 
+
+1- Algoritmo "Numeros maiores ou iguais"
+var
+   x, y: inteiro
+inicio
+   escreva ("Digite os 2 números: ")
+   leia(x, y)
+   se (x > y) entao
+      escreval (x," é maior que",y)
+   senao
+      escreval (y," é maior que",x)
+   fimse
+   se (x = y) então
+      escreval ("OBS: Os dois são iguais!")
+   fimse
+fimalgoritmo
+
+
+2- Algoritmo "Valor entre 0 e 9"
+Var
+   num1: inteiro
+Inicio
+   escreva ("Escreva um número inteiro: ")
+   leia (num1)
+   se (num1 >= 0) e (num1 <= 9) entao
+      escreval ("Valor válido")
+   senao
+      escreval ("Valor inválido")
+   fimse
+Fimalgoritmo
+
+
+3- Algoritmo "Codigo"
+Var
+   CODIGO: inteiro
+Inicio
+   escreva ("Digite um numero: ")
+   leia(CODIGO)
+   se ((CODIGO >= 1) e (CODIGO <= 3)) entao
+      se (CODIGO = 1) entao
+         escreval ("Um")
+      senao
+         se (CODIGO = 2) entao
+            escreval ("Dois")
+         fimse
+      fimse
+      se (CODIGO = 3)  entao
+         escreval ("Três")
+      fimse
+   senao
+      escreval ("Código invalido")
+   fimse
+Fimalgoritmo
+
+4- Algoritmo "Triangulos"
+Var
+   A, B, C: inteiro
+Inicio
+   escreval ("Quais os lados do triangulo?")
+   leia (A, B, C)
+   se ((A < C + B) e (B < C + A) e (C < B + A)) entao
+      se ((A = B) e (B = C)) entao
+         escreval ("É um triangulo equilátero")
+      senao
+         se ((A = B) ou (A = C) ou (B = C)) entao
+            escreval ("É um triangulo Isoceles")
+         senao
+            escreval ("É um triangulo Escaleno")
+         fimse
+      fimse
+   senao
+      escreval ("Isso não é um triangulo")
+   fimse
+Fimalgoritmo
+
+5- Algoritmo "Negativo e positivo"
+Var
+   num1: inteiro
+Inicio
+   escreva ("Escreva um número inteiro: ")
+   leia (num1)
+   se num1 >= 0 então
+      escreval ("Este número é positivo")
+   senao
+      escreval ("Este número é negativo")
+   fimse
+Fimalgoritmo
+
+6- Algoritmo "1 até 100"
+Var
+   numeros: inteiro
+inicio
+   para numeros de 1 ate 100 faça
+      escreval(numeros)
+   fimpara
+Fimalgoritmo
+
+7- Algoritmo "100 até 1"
+var
+   num: inteiro
+inicio
+   para num de 100 ate 1 passo -1 faca
+      escreval(num)
+   fimpara
+Fimalgoritmo
+
+8- Algoritmo "1 até 100 (pares)"
+var
+   num: inteiro
+inicio
+   para num de 2 ate 100 passo 2 faca
+      escreval(num)
+   fimpara
+Fimalgoritmo
+
+9- Algoritmo "1 até 100 (impares)"
+var
+   num: inteiro
+inicio
+   para num de 1 ate 100 passo 2 faca
+      escreval(num)
+   fimpara
+Fimalgoritmo
+
+10- Algoritmo "Tabuada"
+Var
+   tabu,num:inteiro
+Inicio
+   escreva("Digite um numero: ")
+   leia(num)
+   para tabu de 0 ate 10 faca
+      escreval (num," x",tabu," =",tabu*num)
+   fimpara
+Fimalgoritmo

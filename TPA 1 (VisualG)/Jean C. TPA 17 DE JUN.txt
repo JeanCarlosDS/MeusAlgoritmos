@@ -1,0 +1,279 @@
+Nome: Jean C.
+1° DS
+
+TPA 17/JUN
+
+1- Algoritmo "Peça"
+Var
+   qnt_min, qnt_max, qnt_media : real
+Inicio
+   escreval ("Qual é o estoque maximo para as peças?")
+   leia (qnt_max)
+   escreval ("E qual a quantidade minima?")
+   leia (qnt_min)
+   qnt_media <- (qnt_min + qnt_max) / 2
+   escreval ("A media de peças que cabem no estoque é de ",qnt_media)
+Fimalgoritmo
+
+2- Algoritmo "Dolar"
+Var
+   preco_dolar, val_convert: real
+Inicio
+   escreval ("Qual a cotação do dolar atualmente?")
+   leia (preco_dolar)
+   escreval ("Digite o valor que será convertido:")
+   leia (val_convert)
+   //Achei interessante que consegui achar uma forma de fazer essa conversão sem usar uma nova variante \/
+   escreval ("Seu valor deu",val_convert*preco_dolar, " reais")
+Fimalgoritmo
+
+3- Algoritmo "Vendedores de peça"
+Var
+   ident_vendedor: caracter
+   preco_peca, qnt_vend, comissao: real
+Inicio
+   escreval ("Qual o nome do vendedor?")
+   leia (ident_vendedor)
+   escreval ("Qual o preço da peça?")
+   leia (preco_peca)
+   escreval ("E quantas foram vendidas?")
+   leia (qnt_vend)
+   comissao <- (preco_peca*qnt_vend) / 100 *5
+   escreval ("O vendendor ",ident_vendedor," vai receber",comissao," reais")
+Fimalgoritmo
+
+4- Algoritmo "Distributiva"
+Var
+   A, B, C, D: inteiro
+Inicio
+   escreva ("Valor de A:")
+   leia (A)
+   escreva ("Valor de B:")
+   leia (B)
+   escreva ("Valor de C:")
+   leia (C)
+   escreva ("Valor de D:")
+   leia (D)
+   escreval (" ")
+   escreval ("A com B:")
+   escreval ("Multiplicação:",A*B)
+   escreval ("Adição:",A+B)
+   escreval (" ")
+   escreval ("A com C:")
+   escreval ("Multiplicação:",A*C)
+   escreval ("Adição:",A+C)
+   escreval (" ")
+   escreval ("A com D:")
+   escreval ("Multiplicação:",A*D)
+   escreval ("Adição:",A+D)
+   escreval (" ")
+   escreval ("B com C:")
+   escreval ("Multiplicação:",B*C)
+   escreval ("Adição:",B+C)
+   escreval (" ")
+   escreval ("B com D:")
+   escreval ("Multiplicação:",B*D)
+   escreval ("Adição:",B+D)
+   escreval (" ")
+   escreval ("C com D:")
+   escreval ("Multiplicação:",C*D)
+   escreval ("Adição:",C+D)
+Fimalgoritmo
+
+5- Algoritmo "Trocar valores"
+Var
+   A, B: inteiro
+Inicio
+   Escreva ("Escreva o valor de A:")
+   leia (A)
+   Escreva ("Escreva o valor de B:")
+   leia (B)
+   Escreval ("A=",B," e B=",A)
+Fimalgoritmo
+
+6- Algoritmo "Modulo de X"
+Var
+   numero, numero2: inteiro
+Inicio
+   Escreva ("Digite um valor:")
+   leia (numero)
+   se (numero >= 0) entao
+      escreval ("O numero",numero," é maior ou igual a zero")
+   senao
+      escreval ("O numero",numero," não é maior ou igual a zero")
+   fimse
+   escreva ("Digite outro numero:")
+   leia (numero2)
+   se (numero2 * (-1) < 0) entao
+      escreval ("O numero",numero2," agora é menor que zero")
+   senao
+      escreval ("O numero",numero2," agora não é menor que zero")
+   fimse
+Fimalgoritmo
+
+7- Algoritmo "Ordem decrescente"
+var
+   x, y, z: inteiro
+inicio
+   escreva ("Digite os 3 numeros para ordená-los:")
+   leia(x, y, z)
+   se (x > y) entao
+      se (x > z) entao
+         se (y > z) entao
+            escreval ("A ordem é: ", x, ",", y, ",",z)
+         senao
+            escreval ("A ordem é: ", x, ",", z, ",", y)
+         fimse
+      fimse
+   fimse
+   se (x < y) entao
+      se (y > z) entao
+         se (x > z) entao
+            escreval ("A ordem é: ", y, ",", x, ",", z)
+         senao
+            escreval ("A ordem é: ", y, ",", z, ",", x)
+         fimse
+      fimse
+   fimse
+   se (x < y) entao
+      se (y < z) entao
+         escreval ("A ordem é: ", z, ",", y, ",", x)
+      fimse
+   fimse
+   se (x > y) entao
+      se (x < z) entao
+         escreval ("A ordem é: ", z, ",", x, ",", y)
+      fimse
+   fimse
+fimalgoritmo
+
+8- Algoritmo "Calculadora"
+Var
+   n1, n2: real
+   operacao: caracter
+Inicio
+   escreval ("-=-=-=-=-=-=-=-=-=-=-=-=-=-")
+   escreval ("Calculadora mt top")
+   escreval ("-=-=-=-=-=-=-=-=-=-=-=-=-=-")
+   escreva ("Primeiro valor:")
+   leia (n1)
+   escreva ("Segundo valor:")
+   leia (n2)
+   escreval ("============================")
+   escreval ("QUAL OPERAÇÃO?")
+   escreval ("Soma --> +")
+   escreval ("Subtração --> -")
+   escreval ("Multiplicação --> *")
+   escreval ("Divisão --> /")
+   escreval ("============================")
+   leia (operacao)
+   escolha (operacao)
+   caso "+"
+      escreval ("============================")
+      escreval ("Resultado:", n1+n2)
+      escreval ("============================")
+   caso "-"
+      escreval ("============================")
+      escreval ("Resultado:", n1-n2)
+      escreval ("============================")
+   caso "*"
+      escreval ("============================")
+      escreval ("Resultado:", n1*n2)
+      escreval ("============================")
+   caso "/"
+      escreval ("============================")
+      escreval ("Resultado:", n1/n2)
+      escreval ("============================")
+   outrocaso
+      escreval ("============================")
+      escreval ("Tipo de operação invalida.")
+      escreval ("============================")
+   fimescolha
+Fimalgoritmo
+
+9- Algoritmo "Questao 9"
+//mermao esse algoritmo ficou perfeito slk
+Var
+   num1, num2: inteiro
+   resul_media: real
+   op: caracter
+Inicio
+   escreva ("Digite um número inteiro: ")
+   leia (num1)
+   escreva ("Digite outro número inteiro: ")
+   leia (num2)
+   escreval ("-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-")
+   escreval ("O QUE DESEJA FAZER?")
+   escreval ("-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-")
+   //
+   escreval (" ")
+   escreval ("Digite 1 para:")
+   escreval ("Verificar se esses números são multiplos ou não.")
+   escreval (" ")
+   //
+   escreval ("Digite 2 para:")
+   escreval ("Verificar se esses números são pares ou ímpares.")
+   escreval (" ")
+   //
+   escreval ("Digite 3 para:")
+   escreval ("Verificar se a média desses números é maior ou igual a 7.")
+   escreval (" ")
+   //
+   escreval ("Digite 4 para:")
+   escreval ("Sair.")
+   escreval ("-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-")
+   escreval (" ")
+   //
+   leia (op)
+   escolha (op)
+   caso "1"
+      se (num1) MOD (num2) >= 1 então
+         escreval ("Estes números não são múltiplos um do outro")
+      senao
+         escreval ("Estes números são múltiplos um do outro")
+      fimse
+      //
+   caso "2"
+      se (num1) MOD (num2) = 0 então
+         escreval ("Estes números são pares")
+      senao
+         escreval ("Estes números são ímpares")
+      fimse
+      //
+   caso "3"
+      resul_media <- num1+num2 / 2
+      se (resul_media) >= 7 então
+         escreval ("A média é maior ou igual a 7")
+         escreval ("Resultado:",resul_media)
+      senao
+         escreval ("A média não é maior ou igual a 7")
+         escreval ("Resultado:",resul_media)
+      fimse
+      //
+   caso "4"
+      escreval ("Finalizando algoritmo...")
+      //
+   outrocaso
+      escreval ("-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=")
+      escreval ("Esta não é uma opção válida")
+      escreval ("-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=")
+   fimescolha
+Fimalgoritmo
+
+10- Algoritmo "Peso ideal"
+Var
+   h: real
+   sexo: caracter
+Inicio
+   escreva("Qual a sua altura? ")
+   leia (h)
+   escreval ("Você é homem (H) ou mulher (M)?")
+   escreva ("R:")
+   leia (sexo)
+   escolha (sexo)
+   caso "H"
+      escreval ("O seu peso ideal baseando-se na sua altura é de",(72.7*h)-58," kg")
+   caso "M"
+      escreval ("O seu peso ideal baseando-se na sua altura é de",(62.1*h)-44.7," kg")
+   fimescolha
+Fimalgoritmo

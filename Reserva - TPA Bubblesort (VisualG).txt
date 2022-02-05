@@ -1,0 +1,24 @@
+Algoritmo "Bubblesort"
+Var
+   vet: vetor[1..5] de real
+   i, o: inteiro
+   aux: real
+Inicio
+   para i de 1 ate 5 faca
+      escreva("Digite o",i," valor: ")
+      leia(vet[i])
+      limpatela
+   fimpara
+   para i de 1 ate 4 faca
+      para o de i+1 ate 5 faca
+         se (vet[i] > vet[o]) entao
+            aux <- vet[i]
+            vet[i] <- vet[o]
+            vet[o] <- aux
+         fimse
+      fimpara
+   fimpara
+   para i de 1 ate 5 faca
+      escreval("[",vet[i],"]")
+   fimpara
+Fimalgoritmo

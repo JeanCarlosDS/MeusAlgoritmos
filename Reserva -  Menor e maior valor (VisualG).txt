@@ -1,0 +1,28 @@
+algoritmo "Valor maior e menor"
+var
+   vet: vetor [1..10] de inteiro
+   contador,a,ma,me,posma,posme:inteiro
+inicio
+   para a de 1 ate 10 faca
+      escreva("Escreva o ",a,"º número: ")
+      leia(vet[a])
+      me<-vet[1]
+      ma<-vet[1]
+      posma<-1
+      posme<-1
+   fimpara
+   para a de 2 ate 10 faca
+      se me > vet[a] então
+         me<-vet[a]
+         posme<-a
+      fimSe
+   fimPara
+   para a de 2 ate 10 faca
+      se ma < vet[a] então
+         ma<-vet[a]
+         posma<-a
+      fimse
+   fimPara
+   escreval("O menor elemento do vetor é" , me, " e está na posição ",posme)
+   escreval("O maior elemento do vetor é" , ma, " e está na posição ",posma)
+fimAlgoritmo

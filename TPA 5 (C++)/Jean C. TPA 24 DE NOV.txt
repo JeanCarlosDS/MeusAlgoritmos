@@ -1,0 +1,246 @@
+1- #include <stdio.h>
+#include <stdlib.h>
+
+void main()
+{
+    int desconto, pessoas;
+    float conta, contaP;
+
+    printf ("\n--------------------------------");
+    printf ("\nCALCULO DE DESCONTO");
+    printf ("\n--------------------------------");
+    printf ("\n");
+    printf ("\nQual o valor total da conta? ");
+    scanf ("\n%f", &conta);
+    printf ("\nQual o desconto oferecido? OBS: Escreva somente o numero. ");
+    scanf ("\n%d", &desconto);
+    printf ("\nPor fim, quantas pessoas estao na mesa? ");
+    scanf ("\n%d", &pessoas);
+
+    conta = conta - ((desconto*conta)/100);
+    contaP = (conta / pessoas);
+
+    printf ("\nO valor total da conta com desconto eh de %.2f, e cada pessoa na mesa pagara %.2f ", conta, contaP);
+
+    printf ("\n");
+    system("pause");
+}
+
+2- #include <stdio.h>
+#include <stdlib.h>
+
+void main()
+{
+
+    int dia_semana;
+    float conta;
+
+    printf ("\n--------------------------------");
+    printf ("\nSEMANA DO DESCONTO");
+    printf ("\n--------------------------------");
+    printf ("\n");
+
+    printf ("\nQual o valor da conta? ");
+    scanf ("%f", &conta);
+
+    printf ("\nQUAL O DIA DA SEMANA?");
+    printf ("\n1 - Segunda-Feira (30 por cento)");
+    printf ("\n2 - Terca-Feira (40 por cento)");
+    printf ("\n3 - Quarta-Feira (Pizza em dobro)");
+    printf ("\n4 - Quinta-Feira (20 por cento)");
+    printf ("\n5 - Sexta-Feira (10 por cento)");
+    printf ("\n6 - Sabado (Sem desconto)");
+    printf ("\n7 - Domingo-Feira (Refrigerante gratis)");
+    printf ("\n");
+    printf ("\nESCOLHA UMA DAS OPCOES NUMERICAS ACIMA: ");
+    scanf ("%d", &dia_semana);
+
+    switch(dia_semana)
+    {
+    case 1:
+        printf ("\n");
+        conta = conta - ((30*conta)/100);
+        printf ("O valor final da conta com desconto baseado no dia da semana eh de %.2f Reais.", conta);
+        break;
+
+    case 2:
+        printf ("\n");
+        conta = conta - ((40*conta)/100);
+        printf ("O valor final da conta com desconto baseado no dia da semana eh de %.2f Reais.", conta);
+        break;
+
+    case 3:
+        printf ("\nO valor da conta eh de %.2f e 1 pizza gratis", conta);
+        break;
+
+    case 4:
+        printf ("\n");
+        conta = conta - ((20*conta)/100);
+        printf ("O valor final da conta com desconto baseado no dia da semana eh de %.2f Reais.", conta);
+        break;
+
+    case 5:
+        printf ("\n");
+        conta = conta - ((10*conta)/100);
+        printf ("O valor final da conta com desconto baseado no dia da semana eh de %.2f Reais.", conta);
+        break;
+
+    case 6:
+        printf ("\nEsse dia nao possui desconto, entao a conta ficou %.2f", conta);
+        break;
+
+    case 7:
+        printf ("\nO valor da conta eh de %.2f e 1 refrigerante gratis", conta);
+        break;
+
+    default:
+        printf ("\nDia da semana invalido. Tente novamente...");
+        break;
+    };
+
+    printf ("\n");
+    system ("pause");
+}
+
+3- #include <stdio.h>
+#include <stdlib.h>
+
+void main()
+{
+
+    int sorvete;
+
+    printf ("\n--------------------------------");
+    printf ("\nTIPOS DE SORVETE E SUA");
+    printf ("\nINFORMACAO NUTRICIONAL");
+    printf ("\n--------------------------------");
+    printf ("\n");
+
+    printf ("\nQUAL TIPO DE SORVETE?");
+    printf ("\n1 - Pote 2l");
+    printf ("\n2 - Casquinha");
+    printf ("\n3 - Pote 200ml");
+    printf ("\n4 - Picole");
+    printf ("\n");
+    printf ("\nESCOLHA UMA DAS OPCOES NUMERICAS ACIMA: ");
+    scanf ("%d", &sorvete);
+
+    switch(sorvete)
+    {
+    case 1:
+        printf("\nPOTE 2L - INFORMACAO NUTRICIONAL");
+        printf("\n Calorias: 1200kcal");
+        printf("\n Carboidratos: 300g");
+        printf("\n   dos quais: 20g acucares");
+        printf("\n Gorduras Totais: 50");
+        printf("\n Gorduras Trans: 0");
+        printf("\n Gorduras Saturadas: 0");
+        printf("\n Sodio: 50mg");
+        printf("\n----------------------------------");
+        break;
+
+    case 2:
+        printf("\nCASQUINHA - INFORMACAO NUTRICIONAL");
+        printf("\n Calorias: 150kcal");
+        printf("\n Carboidratos: 20g");
+        printf("\n   dos quais: 5g acucares");
+        printf("\n Gorduras Totais: 5g");
+        printf("\n Gorduras Trans: 0");
+        printf("\n Gorduras Saturadas: 0");
+        printf("\n Sodio: 15mg");
+        printf("\n----------------------------------");
+        break;
+
+    case 3:
+        printf("\nPOTE 200ML - INFORMACAO NUTRICIONAL");
+        printf("\n Calorias: 300kcal");
+        printf("\n Carboidratos: 50g");
+        printf("\n   dos quais: 10g acucares");
+        printf("\n Gorduras Totais: 10g");
+        printf("\n Gorduras Trans: 0");
+        printf("\n Gorduras Saturadas: 0");
+        printf("\n Sodio: 30mg");
+        printf("\n----------------------------------");
+        break;
+
+    case 4:
+        printf("\nPICOLE - INFORMACAO NUTRICIONAL");
+        printf("\n Calorias: 50kcal");
+        printf("\n Carboidratos: 20g");
+        printf("\n   dos quais: 5g acucares");
+        printf("\n Gorduras Totais: 2g");
+        printf("\n Gorduras Trans: 0");
+        printf("\n Gorduras Saturadas: 0");
+        printf("\n Sodio: 10mg");
+        printf("\n----------------------------------");
+        break;
+
+    default:
+        printf("Opcao invalida. Tente novamente...");
+        break;
+    };
+    printf("\n");
+    system("pause");
+};
+
+4- #include <stdio.h>
+#include <stdlib.h>
+
+void main()
+{
+
+    char cpf[14];
+    int i;
+
+    printf("\n-----------------");
+    printf("\nFORMATAR CPF.   |");
+    printf("\n-----------------\n");
+
+    printf("\nDigite um numero de CPF: ");
+    scanf("%s", &cpf);
+    printf("\n");
+
+    printf("O CPF formatado ficou da seguinte maneira: ");
+    for(i=0; i < 14; i++)
+    {
+        if(cpf[i] == '.' || cpf[i] == '-')
+        {
+            cpf[i] = ' ';
+        }
+        else
+            printf("%c", cpf[i]);
+    }
+    printf("\n");
+    system("pause");
+}
+
+5- #include <stdio.h>
+#include <stdlib.h>
+#include <time.h>
+#include <math.h>
+
+void main()
+{
+    char senha[15];
+    int i, letras;
+    srand (time(NULL));
+
+    printf("\n------------------");
+    printf("\nGERADOR DE SENHA.|");
+    printf("\n------------------\n\n");
+
+    printf("Digite uma senha (15 caracteres no maximo): ");
+    scanf("%s", &senha);
+
+    for(i=0; i < 15; i++)
+    {
+        if(senha[i] == 'a' || senha[i] == 'e')
+        {
+            letras = letras + 1;
+        }
+    }
+    letras = letras*(pow(10,5.1)*(rand()%100));
+    printf("Sua nova senha eh %d.", letras);
+    printf("\n");
+    system("pause");
+}
